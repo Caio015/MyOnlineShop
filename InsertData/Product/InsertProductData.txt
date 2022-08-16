@@ -1,0 +1,35 @@
+{
+  "productName": "Notebook Dell Inspiron",
+  "description": "Notebook i5, 16 ram, 520SD, 15'",
+  "urlImage": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "quantity": 2,
+  "price": 3999.99,
+  "category": "NOTEBOOK"
+}
+
+{
+  "productName": "Smartphone Samsung S22 FE",
+  "description": "Smartphone Samsung S22 FE WHITE",
+  "urlImage": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRGZe6DRS1V8qfQivu2as1RJ9xDDUGv2Q488ouyoWLqsTgVnuGBj4UBXU6Rz-2KyQJSBVJdu4m2HiVyZcvIYgGS06LXBaTGUuooGXkeyQzeHcehG0UEnbsb&usqp=CAE",
+  "quantity": 6,
+  "price": 4299.99,
+  "category": "SMARTPHONE"
+}
+
+{
+  "productName": "Monitor AOC HERO",
+  "description": "Gaming Monitor 27'",
+  "urlImage": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRirMPQm5f6hEzvMIBuyZ7Pe4LhSLDTMkcSnUhijaD-t5uj4ppl0OY968sgowGfpaL5TGeNA4e_9Bt6JOwUg0wd6IZ3ZiVgNWau2PyVaSueReqf4RKXzXSEcw&usqp=CAE",
+  "quantity": 3,
+  "price": 1499.99,
+  "category": "MONITOR"
+}
+
+{
+  "productName": "Razer Naga",
+  "description": "Gaming Mouse 3200 DPI",
+  "urlImage": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTlvdMqjbmaDIgfoOWx_z6hxFZPj6FBjdIq7wlIwSXKODnTp74EJSDoZEL9F4VxpryJk-KRRAuFdeqxWm2fm1fpvuZoIiRyKCcx-154VH9D7bBwwEkQETnLig&usqp=CAE",
+  "quantity": 12,
+  "price": 499.99,
+  "category": "ELETRONICS"
+}
