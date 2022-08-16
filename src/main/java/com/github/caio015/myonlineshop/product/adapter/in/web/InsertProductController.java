@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/admin")
+@RequestMapping(path = "/admin/product")
 @RequiredArgsConstructor
 public class InsertProductController {
 
