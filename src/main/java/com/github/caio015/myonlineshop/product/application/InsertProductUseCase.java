@@ -20,6 +20,7 @@ public class InsertProductUseCase {
                                  .description(request.getDescription())
                                  .urlImage(request.getUrlImage())
                                  .price(request.getPrice())
+                                 .quantity(request.getQuantity())
                                  .category(request.getCategory())
                                  .build();
 
