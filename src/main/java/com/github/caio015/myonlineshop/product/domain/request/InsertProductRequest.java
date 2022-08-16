@@ -1,5 +1,6 @@
 package com.github.caio015.myonlineshop.product.domain.request;
 
+import com.github.caio015.myonlineshop.product.domain.model.Category;
 import lombok.Value;
 
 import java.math.BigDecimal;
@@ -17,6 +18,6 @@ public class InsertProductRequest {
 
      BigDecimal price;
 
-     Long categoryId;
+     Category category;
 
 }
