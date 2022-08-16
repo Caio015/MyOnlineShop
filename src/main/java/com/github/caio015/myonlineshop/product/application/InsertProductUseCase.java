@@ -1,8 +1,6 @@
 package com.github.caio015.myonlineshop.product.application;
 
-import com.github.caio015.myonlineshop.product.application.port.out.FindCategoryByIdPort;
 import com.github.caio015.myonlineshop.product.application.port.out.SaveProductPort;
-import com.github.caio015.myonlineshop.product.domain.dto.CategoryDto;
 import com.github.caio015.myonlineshop.product.domain.model.Category;
 import com.github.caio015.myonlineshop.product.domain.model.Product;
 import com.github.caio015.myonlineshop.product.domain.request.InsertProductRequest;
