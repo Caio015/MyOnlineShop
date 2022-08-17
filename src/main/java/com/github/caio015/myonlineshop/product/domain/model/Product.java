@@ -1,9 +1,7 @@
 package com.github.caio015.myonlineshop.product.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.github.caio015.myonlineshop.product.domain.request.EditProductRequest;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -24,7 +22,7 @@ public class Product {
 
     private String urlImage;
 
-    private Integer quantity;
+    private Integer inStock;
 
     private BigDecimal price;
 
@@ -32,5 +30,17 @@ public class Product {
     private Category category;
 
     private Integer rating;
+
+
+    public void editProduct(EditProductRequest request){
+
+        this.productName = request.getProductName();
+        this.description = request.getDescription();
+        this.urlImage = request.getUrlImage();
+        this.inStock = request.getInStock();
+        this.price = request.getPrice();
+        this.category = request.getCategory();
+
+    }
 
 }
