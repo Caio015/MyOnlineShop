@@ -21,5 +21,4 @@ public class InsertProductController {
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
 }

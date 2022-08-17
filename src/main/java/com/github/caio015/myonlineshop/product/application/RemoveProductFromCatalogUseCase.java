@@ -27,7 +27,7 @@ public class RemoveProductFromCatalogUseCase {
 
     private void verifyIfThereIsItensOnInventory(Product product) {
 
-        if(product.getQuantity() > 0) {
+        if(product.getInStock() > 0) {
 
             throw new BusinessRuleException("Can't remove a product that has itens in inventory");
         }

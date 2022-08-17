@@ -14,7 +14,7 @@ public class InsertProductRequest {
 
      String urlImage;
 
-     Integer quantity;
+     Integer inStock;
 
      BigDecimal price;
 
