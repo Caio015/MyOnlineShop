@@ -16,6 +16,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CreatePersonalDetailsService {
 
+    private final CostumerVerificationService costumerVerificationService;
+
     public PersonalDetails generatePersonalDetails(RegisterCostumerRequest request){
 
         LocalDate parsedDate = LocalDate.parse(request.getDateOfBirth(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
@@ -31,6 +33,8 @@ public class CreatePersonalDetailsService {
                                  .country(request.getCountry())
                                  .mainAddress(request.getMainAddress())
                                  .build();
+
+        phoneNumbers(request).forEach(phoneNumber -> costumerVerificationService.verifyPhoneLenght(phoneNumber.getNumber()));
 
         return   PersonalDetails.builder()
                                 .firstName(request.getFirstName())

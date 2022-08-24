@@ -41,6 +41,6 @@ public class RegisterCostumerRequest {
 
     @NotNull @NotBlank Boolean mainAddress;
 
-   List<PhoneNumberRequest> phoneNumber;
+    List<PhoneNumberRequest> phoneNumber;
 
 }

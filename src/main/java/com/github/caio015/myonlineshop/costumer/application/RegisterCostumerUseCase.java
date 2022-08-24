@@ -1,9 +1,7 @@
 package com.github.caio015.myonlineshop.costumer.application;
 
-import com.github.caio015.myonlineshop.config.exceptions.BusinessRuleException;
 import com.github.caio015.myonlineshop.costumer.application.port.out.SaveCostumerPort;
 import com.github.caio015.myonlineshop.costumer.application.port.out.SaveUserPort;
-import com.github.caio015.myonlineshop.costumer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
 import com.github.caio015.myonlineshop.costumer.domain.dto.CostumerDTO;
 import com.github.caio015.myonlineshop.costumer.domain.model.*;
 import com.github.caio015.myonlineshop.costumer.domain.request.RegisterCostumerRequest;
@@ -21,13 +19,19 @@ public class RegisterCostumerUseCase {
 
     private final CreatePersonalDetailsService createPersonalDetails;
 
-    private final VerifyIfEmailOrCpfIsAlreadyRegisteredPort findCostumerByCpfOrEmail;
+    private final CostumerVerificationService verificationService;
+
+
 
 
     @Transactional
     public CostumerDTO execute(RegisterCostumerRequest request) {
 
-        verifyIfCpfOrEmailAlreadyUsed(request);
+        verificationService.verifyIfCpfOrEmailAlreadyUsed(request);
+
+        verificationService.verifyCepLenght(request.getCep());
+
+        verificationService.verifyCpfLenght(request.getCpf());
 
         PersonalDetails personalDetails = createPersonalDetails.generatePersonalDetails(request);
 
@@ -40,13 +44,5 @@ public class RegisterCostumerUseCase {
         saveCostumer.saveCostumer(costumer);
 
         return CostumerDTO.of(costumer);
-    }
-
-    private void verifyIfCpfOrEmailAlreadyUsed(RegisterCostumerRequest request) {
-
-        if(findCostumerByCpfOrEmail.costumerAlreadyRegistered(request.getCpf(), request.getEmail())){
-
-            throw new BusinessRuleException("CPF or Email already used");
-        }
     }
 }
