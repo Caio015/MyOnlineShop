@@ -2,7 +2,7 @@ package com.github.caio015.myonlineshop.customer.application;
 
 import com.github.caio015.myonlineshop.config.exceptions.BusinessRuleException;
 import com.github.caio015.myonlineshop.config.exceptions.InvalidInsertDataException;
-import com.github.caio015.myonlineshop.Customer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
+import com.github.caio015.myonlineshop.customer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
 import com.github.caio015.myonlineshop.customer.domain.request.RegisterCustomerRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class CustomerVerificationService {
 
     public void verifyIfCpfOrEmailAlreadyUsed(RegisterCustomerRequest request) {
 
-        if(findCustomerByCpfOrEmail.CustomerAlreadyRegistered(request.getCpf(), request.getEmail())){
+        if(findCustomerByCpfOrEmail.customerAlreadyRegistered(request.getCpf(), request.getEmail())){
 
             throw new BusinessRuleException("CPF or Email already used");
         }

@@ -1,7 +1,7 @@
 package com.github.caio015.myonlineshop.customer.adapter.out.persistence;
 
-import com.github.caio015.myonlineshop.Customer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
 import com.github.caio015.myonlineshop.customer.application.port.out.SaveCustomerPort;
+import com.github.caio015.myonlineshop.customer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
 import com.github.caio015.myonlineshop.customer.domain.model.Customer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
