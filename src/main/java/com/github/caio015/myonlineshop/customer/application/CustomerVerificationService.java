@@ -3,6 +3,7 @@ package com.github.caio015.myonlineshop.customer.application;
 import com.github.caio015.myonlineshop.config.exceptions.BusinessRuleException;
 import com.github.caio015.myonlineshop.config.exceptions.InvalidInsertDataException;
 import com.github.caio015.myonlineshop.customer.application.port.out.VerifyIfEmailOrCpfIsAlreadyRegisteredPort;
+import com.github.caio015.myonlineshop.customer.domain.model.Verifiable;
 import com.github.caio015.myonlineshop.customer.domain.request.RegisterCustomerRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,14 +25,14 @@ public class CustomerVerificationService {
         }
     }
 
-    public void verifyCpfLenght(String cpf){
+    private void verifyCpfLenght(String cpf){
 
         if(cpf.length() != 14){
             throw new InvalidInsertDataException("Please insert a valid CPF");
         }
     }
 
-    public void verifyStateLenght(String state){
+    private void verifyStateLenght(String state){
 
         if(state.length() != 2){
 
@@ -39,7 +40,7 @@ public class CustomerVerificationService {
         }
     }
 
-    public void verifyPhoneLenght(String number){
+    private void verifyPhoneLenght(String number){
 
         if(number.length() != 9){
 
@@ -47,12 +48,24 @@ public class CustomerVerificationService {
         }
     }
 
-    public void verifyCepLenght(String cep){
+    private void verifyCepLenght(String cep){
 
         if(cep.length() != 9) {
 
             throw new InvalidInsertDataException("Please insert a valid CEP");
         }
+    }
+
+    public void verifyCustomerRequestService(Verifiable request){
+
+        verifyCepLenght(request.getCep());
+
+        verifyCpfLenght(request.getCpf());
+
+        request.getPhoneNumber().forEach(phoneRequest -> verifyPhoneLenght(phoneRequest.getNumber()));
+
+        verifyStateLenght(request.getState());
+
     }
 
 }

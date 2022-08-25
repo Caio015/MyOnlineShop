@@ -24,6 +24,4 @@ public class Address {
 
     String country;
 
-    Boolean mainAddress;
-
 }

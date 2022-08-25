@@ -23,17 +23,12 @@ public class RegisterCustomerUseCase {
 
     private final CustomerVerificationService verificationService;
 
-
-
-
     @Transactional
     public CustomerDTO execute(RegisterCustomerRequest request) {
 
         verificationService.verifyIfCpfOrEmailAlreadyUsed(request);
 
-        verificationService.verifyCepLenght(request.getCep());
-
-        verificationService.verifyCpfLenght(request.getCpf());
+        verificationService.verifyCustomerRequestService(request);
 
         PersonalDetails personalDetails = createPersonalDetails.generatePersonalDetails(request);
 

@@ -42,5 +42,4 @@ public class Customer {
         return this.getPersonalDetails().getPhoneNumber();
 
     }
-
 }

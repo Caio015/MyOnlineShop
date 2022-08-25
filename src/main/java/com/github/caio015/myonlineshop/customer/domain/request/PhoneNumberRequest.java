@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 @Value
 public class PhoneNumberRequest {
 
-    @NotNull @NotBlank String phoneNumber;
+    @NotNull @NotBlank String number;
 
     @NotNull @NotBlank String prefix;
 

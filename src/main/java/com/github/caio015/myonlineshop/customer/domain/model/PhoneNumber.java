@@ -1,5 +1,6 @@
 package com.github.caio015.myonlineshop.customer.domain.model;
 
+import com.github.caio015.myonlineshop.customer.domain.request.EditCustomerDetailsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,16 @@ public class PhoneNumber {
 
         return new PhoneNumber(phoneNumber,
                                prefix);
+    }
+
+    public void editPhoneNumber(EditCustomerDetailsRequest request) {
+
+        request.getPhoneNumber()
+               .forEach(phoneRequest -> {
+
+                   this.number = phoneRequest.getNumber();
+                   this.prefix = phoneRequest.getPrefix();
+
+               });
     }
 }

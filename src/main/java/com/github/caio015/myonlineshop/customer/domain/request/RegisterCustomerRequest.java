@@ -1,13 +1,15 @@
 package com.github.caio015.myonlineshop.customer.domain.request;
 
+import com.github.caio015.myonlineshop.customer.domain.model.Verifiable;
 import lombok.Value;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 @Value
-public class RegisterCustomerRequest {
+public class RegisterCustomerRequest implements Verifiable {
 
     @NotNull @NotBlank String email;
 
@@ -38,8 +40,6 @@ public class RegisterCustomerRequest {
     @NotNull @NotBlank String state;
 
     @NotNull @NotBlank String country;
-
-    @NotNull @NotBlank Boolean mainAddress;
 
     List<PhoneNumberRequest> phoneNumber;
 

@@ -14,10 +14,9 @@
   "city": "Hortolândia",
   "state": "SP",
   "country": "Brazil",
-  "mainAddress" : true,
     "phoneNumber": [
     {
-      "phoneNumber": "978747743",
+      "number": "978747743",
       "prefix": "19"
     }
   ]
@@ -39,10 +38,9 @@
   "city": "Salvador",
   "state": "BA",
   "country": "Brazil",
-  "mainAddress" : true,
     "phoneNumber": [
     {
-      "phoneNumber": "989877726",
+      "number": "989877726",
       "prefix": "71"
     }
   ]
@@ -64,10 +62,9 @@
   "city": "Tocantinopolis",
   "state": "TO",
   "country": "Brazil",
-  "mainAddress" : true,
-    "phoneNumber": [
+      "phoneNumber": [
     {
-      "phoneNumber": "927821889",
+      "number": "927821889",
       "prefix": "63"
     }
   ]
@@ -89,11 +86,58 @@
   "city": "Gramado",
   "state": "RS",
   "country": "Brazil",
-  "mainAddress" : true,
     "phoneNumber": [
     {
-      "phoneNumber": "987345562",
+      "number": "987345562",
       "prefix": "54"
+    }
+  ]
+}
+
+{
+  "email": "deniro@email.com",
+  "password": "robert",
+  "firstName": "Robert",
+  "lastName": "De Niro",
+  "cpf": "048.795.760-18",
+  "dateOfBirth": "05-11-1954",
+  "avatarUrl": "",
+  "streetName": "Rua das Rosas",
+  "houseNumber": "998",
+  "apartmentNumber": "11",
+  "district": "Roseiras",
+  "cep": "02344-019",
+  "city": "Londrina",
+  "state": "PR",
+  "country": "Brazil",
+    "phoneNumber": [
+    {
+      "number": "908875766",
+      "prefix": "43"
+    }
+  ]
+}
+
+{
+  "email": "joanadark@email.com",
+  "password": "joana",
+  "firstName": "Joana",
+  "lastName": "Dark",
+  "cpf": "241.810.100-23",
+  "dateOfBirth": "29-01-1987",
+  "avatarUrl": "",
+  "streetName": "Rua das Bromelias",
+  "houseNumber": "31",
+  "apartmentNumber": "62",
+  "district": "Santo Antonio",
+  "cep": "98829-220",
+  "city": "Resende",
+  "state": "RJ",
+  "country": "Brazil",
+    "phoneNumber": [
+    {
+      "number": "988275789",
+      "prefix": "21"
     }
   ]
 }

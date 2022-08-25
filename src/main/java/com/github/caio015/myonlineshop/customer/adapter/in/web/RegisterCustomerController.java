@@ -15,7 +15,7 @@ public class RegisterCustomerController {
 
     private final RegisterCustomerUseCase useCase;
 
-    @PostMapping("/register-Customer")
+    @PostMapping("/register-customer")
     public ResponseEntity<CustomerDTO> registerCustomer(@RequestBody RegisterCustomerRequest request){
 
         CustomerDTO result = useCase.execute(request);

@@ -31,10 +31,7 @@ public class CreatePersonalDetailsService {
                                  .state(request.getState())
                                  .district(request.getDistrict())
                                  .country(request.getCountry())
-                                 .mainAddress(request.getMainAddress())
                                  .build();
-
-        phoneNumbers(request).forEach(phoneNumber -> customerVerificationService.verifyPhoneLenght(phoneNumber.getNumber()));
 
         return   PersonalDetails.builder()
                                 .firstName(request.getFirstName())
@@ -53,7 +50,7 @@ public class CreatePersonalDetailsService {
 
         return request.getPhoneNumber()
                       .stream()
-                      .map(phoneRequest -> PhoneNumber.createPhoneNumber(phoneRequest.getPhoneNumber(),
+                      .map(phoneRequest -> PhoneNumber.createPhoneNumber(phoneRequest.getNumber(),
                                                                          phoneRequest.getPrefix()))
                       .collect(Collectors.toList());
     }
